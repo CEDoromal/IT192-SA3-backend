@@ -1,6 +1,7 @@
 package com.rijai.LocationApi.service;
 
 import com.rijai.LocationApi.model.Account;
+import com.rijai.LocationApi.model.Dog;
 import com.rijai.LocationApi.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,5 +22,10 @@ public class AccountService {
         }
         else
             return null;
+    }
+
+    public Account addAccount(Account account)
+    {
+        return accountRepository.save(account);
     }
 }
